@@ -3,7 +3,7 @@
 1. [Environement and Settings] (README.md#Environement and Settings)
 2. [Repository Structure] (README.md#Repository structure)
 3. [Testing Directory] (README.md#Testing Directory)
-4. [Algorithm] (README.md#Algorithm)
+4. [Algorithm Summary] (README.md#Algorithm Summary)
 
 This file explains the procedures and environment settings for implementation of Insight Venmo project. The project aimed to calculate the median degree of a vertex in a graph and update this each time a new Venmo payment appears. The time-frame for median calculation is considered to be 60-seconds.
 
@@ -87,7 +87,7 @@ The contents of `src` contains the single Python 3.5 source code called `rolling
 -"test-3-venmo-trans" is similar to "test-2-venmo-trans" but 4 additional corrupted transactions with empty "actor" fields have been added to the input (one at the beginning of the input stream and the others at the end). We know that the output should be the same as the output of "test-2-venmo-trans" but some error messages will be communicated to the console.
 
 
-##Algorithm
+##Algorithm Summary
 [Back to Table of Contents] (README.md#table-of-contents)
 
 The algorithm used is as following:
