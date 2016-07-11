@@ -108,6 +108,6 @@ The algorithm used is as following:
 
 6- Make a list out of the dictionary `degree`, sort the list and use median function from statistics library in Python3 to calculate the output.
 
-7- Write the output to the end of the output file.
+7- Write the output to the end of the output file and go back to step 1 until no additional record left in the input file.
 
 
