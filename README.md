@@ -1,5 +1,18 @@
 # Table of Contents
 
+Everytime a new transaction arrive
+1- update the maxtimestamp
+2- If the transaction is less than 60 seconds away from the maxtimestamp, ignore new entrance and go forward by repeating the previous output and write it in the output file
+3- If not, calculate the new set of transin60 list of list. Go through the previous transactions and remove the ones outside order. append the new transaction at the end of the record.
+4- Create (Update is hard to know the effect of removed edges) the list of collection dictionary of lists based on  transin60
+5- Build a degree dictionary for all nodes which relates them with their integer degree.
+6- Create a list of non-zero items in degree dictionary.
+7- Run medium function over the sorted version of ths list. 
+8- Write the output in a new line in output file.
+
+9-http://stackoverflow.com/questions/4377109/shell-script-execute-a-python-program-from-within-a-shell-script
+
+
 1. [Challenge Summary] (README.md#challenge-summary)
 2. [Details of Implementation] (README.md#details-of-implementation)
 3. [Building the Venmo Graph] (README.md#building-the-venmo-graph)

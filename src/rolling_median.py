@@ -63,11 +63,11 @@ for line in open(fpath):
 
         # calculating median and write it to the output
         currentmeddegree=median(sorted(degree.values()))  
-        outfile.write(format(currentmeddegree,'.2f')+'\n') # write the float median with two decimal digits to be compatible with the provided test vector
+        outfile.write(str(format(currentmeddegree,'.2f'))+'\n') # write the float median with two decimal digits to be compatible with the provided test vector
         meddegreetime.append(currentmeddegree) # could be removed if data gets very large
    
     else: # error handling if an empty record received
-        print('one transaction at ',data['created_time'],' ignored due to curropted data')
+        print('one transaction at ',data['created_time'],' ignored due to corrupted data')
 
 outfile.close()    
 
