@@ -62,8 +62,8 @@ for line in open(fpath):
     for key in graph:
         if len(list(set(graph[key])))>0:
             degree[key]=len(list(set(graph[key])))
-    currentmeddegree=median(sorted(degree.values()))  
-    outfile.write(str(currentmeddegree)+'\n')
+    currentmeddegree=median(sorted(degree.values())) 
+    outfile.write(format(currentmeddegree,'.2f')+'\n')
     meddegreetime.append(currentmeddegree)
 outfile.close()    
 
