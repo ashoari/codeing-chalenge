@@ -1,0 +1,50 @@
+datetime64
+
+import numpy as np
+
+np.datetime64('2015-02-03T12:00:00-0800')
+np.timedelta64(5,'D')
+np.timedelta64(5,'h')
+np.arange(np.datetime64('2016-02-01'),np.datetime64('2016-03-01'))
+
+parse space seperated textfile
+
+open('\venmo_input\venmo-trans.txt').readlines()(:10)
+
+stations={}
+
+for line in open('\venmo_input\venmo-trans.txt'):
+             if  'Target' in line:
+	     fields=line.split()
+	     stations[fields[0]]=''.join(fields[4:6])
+
+def findstation(s):
+	found={code:name for code,name in stations.items() if s in name}
+	print found
+	return found
+
+def parsefil(filename):
+        return np.genfromtxt(filename,delimeter=dly_delimtere,usecols=dly_usecols,dtype=dly_dtype,names=dly_names)
+
+import pandas as pd
+open('tips.csv','r').readlines()[:10]
+tips=pd.read_csv('tips.csv)
+tips.head()
+tips.mean()
+tips.describe()
+tips.groupby('sex').mean()
+tips.groupby(['sex','smoker']).mean()
+pd.pivot_table
+
+
+Everytime a new transaction arrive
+1- update the maxtimestamp
+2- If the transaction is less than 60 seconds away from the maxtimestamp, ignore new entrance and go forward by repeating the previous output and write it in the output file
+3- If not, calculate the new set of transin60 list of list. Go through the previous transactions and remove the ones outside order. append the new transaction at the end of the record.
+4- Create (Update is hard to know the effect of removed edges) the list of collection dictionary of lists based on  transin60
+5- Build a degree dictionary for all nodes which relates them with their integer degree.
+6- Create a list of non-zero items in degree dictionary.
+7- Run medium function over the sorted version of ths list. 
+8- Write the output in a new line in output file.
+
+9-http://stackoverflow.com/questions/4377109/shell-script-execute-a-python-program-from-within-a-shell-script
