@@ -91,14 +91,23 @@ The contents of `src` contains the single Python 3.5 source code called `rolling
 [Back to Table of Contents] (README.md#table-of-contents)
 
 The algorithm used is as following:
+
 1-Everytime a new transaction arrives, extract the date-time stamp of the transaction in addition to the names of the 'target' and 'actor' of the transaction.
+
 2-If any of the above mentioned field is empty, ignore the transaction and communicate an error message to the console and go back to step 1 to read the next transaction.
+
 3-If the record does contain all the elements, first update the maximum-time-stamp based on previous maximum-time-stamp and the current received transaction.
+
 	3-1-If the current transaction time stamp is within 60s from the maximum-time-stamp, update the list `TranLast60` by adding the current transaction at the bottom of the list and removing all the previous transactions in `TranLast60` which are no longer within 60s timeframe from the current maximum-time-stamp.
+	
 	3-2 Otherwise, do not update the `TranLast60` and use previous values.
+	
 4-Build a dictionary of lists called `graph` based on the records appear in `TranLast60`.
+
 5-Since the list corresponding to each vertex may contain repeated elements, use the elements of the set resulted from that list to calculate the degree of each vertex and store it in a new dictionary composed of the vertices' names and their corresponding degrees.
+
 6- Make a list out of the dictionary `degree`, sort the list and use median function from statistics library in Python3 to calculate the output.
+
 7- Write the output to the end of the output file.
 
 
