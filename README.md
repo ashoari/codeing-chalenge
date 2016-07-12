@@ -1,9 +1,9 @@
 # Table of Contents
 
-1. [Environement and Settings] (README.md#Environement and Settings)
-2. [Repository Structure] (README.md#Repository structure)
-3. [Testing Directory] (README.md#Testing Directory)
-4. [Algorithm Summary] (README.md#Algorithm Summary)
+1. [Environement and Settings] (README.md##Environement and Settings)
+2. [Repository Structure] (README.md##Repository structure)
+3. [Testing Directory] (README.md##Testing Directory)
+4. [Algorithm Summary] (README.md##Algorithm Summary)
 
 This file explains the procedures and environment settings for implementation of Insight Venmo project. The project aimed to calculate the median degree of a vertex in a graph and update this each time a new Venmo payment appears. The time-frame for median calculation is considered to be 60-seconds.
 
