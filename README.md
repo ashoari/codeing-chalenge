@@ -1,18 +1,20 @@
 # Table of Contents
 
-1. [Environement and Settings] (README.md##Environement and Settings)
-2. [Repository Structure] (README.md##Repository structure)
-3. [Testing Directory] (README.md##Testing Directory)
-4. [Algorithm Summary] (README.md##Algorithm Summary)
+1. [Environement and Settings] (README.md#Environement and Settings)
+2. [Repository Structure] (README.md#Repository structure)
+3. [Testing Directory] (README.md#Testing Directory)
+4. [Algorithm Summary] (README.md#Algorithm Summary)
 
 This file explains the procedures and environment settings for implementation of Insight Venmo project. The project aimed to calculate the median degree of a vertex in a graph and update this each time a new Venmo payment appears. The time-frame for median calculation is considered to be 60-seconds.
 
 
 ##Environement and Settings
+
 [Back to Table of Contents] (README.md#table-of-contents)
 My code has been developed with Python 3.5. All the libraries used are standard library but statistics library is not available on Python 2.7. Thus the run.sh code is changes to emphasise that the code should be run in release 3. The code has been tested on cloud9 Linux shell and it works fine. To do the testing I changed the permission of both `run.sh` and `run_tests.sh` shell scripts to be executable using `chmod u+x` command. Also `run_tests.sh` has been executed from its main directory using `./run_tests.sh` command and passed all three tests. Please note that I assume that the float value of median degree use two decimal digits as used in the provided test example and project description. If the output in the test vector does not follow the same convention, the test_script may not pass even with numerical identical outputs.
 
 ##Repository Structure
+
 [Back to Table of Contents] (README.md#table-of-contents)
 
 I used similar structure provided in the project decription with some minor modification as follows:
@@ -57,6 +59,7 @@ I used similar structure provided in the project decription with some minor modi
 The contents of `src` contains the single Python 3.5 source code called `rolling_median.py`. 
 
 ##Testing Directory
+
 [Back to Table of Contents] (README.md#table-of-contents)
 
 -"test-1-venmo-trans" is the test vector provided by Insight. 
@@ -88,6 +91,7 @@ The contents of `src` contains the single Python 3.5 source code called `rolling
 
 
 ##Algorithm Summary
+
 [Back to Table of Contents] (README.md#table-of-contents)
 
 The algorithm used is as following:
