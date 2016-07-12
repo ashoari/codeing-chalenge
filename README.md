@@ -92,7 +92,7 @@ The contents of `src` contains the single Python 3.5 source code called `rolling
 
 The algorithm used is as following:
 
-1-Everytime a new transaction arrives, extract the date-time stamp of the transaction in addition to the names of the 'target' and 'actor' of the transaction.
+1-Everytime a new transaction arrives, extract the date-time-stamp of the transaction in addition to the names of the 'target' and 'actor' of the transaction.
 
 2-If any of the above mentioned field is empty, ignore the transaction and communicate an error message to the console and go back to step 1 to read the next transaction.
 
@@ -102,11 +102,11 @@ The algorithm used is as following:
 	
 	3-2 Otherwise, do not update the `TranLast60` and use previous values.
 	
-4-Build a dictionary of lists called `graph` based on the records appear in `TranLast60`.
+4-Build a dictionary of lists called `graph` based on the records appearing in `TranLast60`.
 
-5-Since the list corresponding to each vertex may contain repeated elements, use the elements of the set resulted from that list to calculate the degree of each vertex and store it in a new dictionary composed of the vertices' names and their corresponding degrees.
+5-Since the list corresponding to each vertex may contain repeated elements, use the number of elements of the set resulted from that list to calculate the degree of each vertex. Store the calculated degree in a new dictionary composed of the vertices' names and their corresponding degrees.
 
-6- Make a list out of the dictionary `degree`, sort the list and use median function from statistics library in Python3 to calculate the output.
+6- Make a list out of the dictionary `degree`, sort the list and use median function from statistics library of Python3 to calculate the output.
 
 7- Write the output to the end of the output file and go back to step 1 until no additional record left in the input file.
 
